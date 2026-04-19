@@ -1,4 +1,4 @@
-# Epic Beaker-Aligned Laboratory Workflow Portfolio
+# Epic Beaker-Aligned Laboratory Workflow Portfolio (In Progress)
 
 This project simulates end-to-end clinical laboratory workflows aligned to Epic Beaker concepts.
 
