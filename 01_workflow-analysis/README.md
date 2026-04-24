@@ -1,4 +1,4 @@
-# 🧪 Workflow Analysis (IN PROGRESS)
+# 🧪 Workflow Analysis (In Progress)
 
 ## Overview
 This module simulates and analyzes microbiology and molecular laboratory workflows across the full **order-to-result lifecycle**, modeled after Epic Beaker-aligned operations.
