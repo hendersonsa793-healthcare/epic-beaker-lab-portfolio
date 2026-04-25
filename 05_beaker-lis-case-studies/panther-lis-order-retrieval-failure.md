@@ -14,13 +14,12 @@ The Hologic Panther molecular platform was unable to retrieve test orders from t
 ---
 
 ## Investigation
-- Attempted LIS restart and manual specimen cross → initial failures observed  
-- Partial reconfiguration restored connectivity but introduced intermittent order retrieval issues  
-- Reviewed LIS protocol output and identified inconsistent message patterns  
-- Compared accession-level structure across working vs failing cases  
+Initial troubleshooting steps restored baseline connectivity but revealed intermittent order retrieval failures.
 
-Key observation:
-- Orders failed when the accession contained a **single standalone test**
+Analysis of LIS protocol output identified inconsistent message patterns. Comparison of accession-level structure across working and failing scenarios revealed a clear dependency on order composition.
+
+### Key Observations
+- Orders failed when the accession contained a single standalone test  
 - Orders succeeded when:
   - Multiple tests were present on the accession  
   - The test was part of a panel/combination order  
@@ -32,36 +31,35 @@ Interface behavior appears dependent on accession-level order structure.
 
 When only a single test is present:
 - Order retrieval or message parsing fails  
-- Required fields may not be populated correctly in the interface message  
+- Required fields may not be consistently populated in the interface message  
 
-Likely causes:
-- Configuration or mapping issue post vendor update  
-- Dependency on multi-order or panel-based formatting within LIS interface logic  
+### Likely Contributing Factors
+- Configuration or mapping inconsistency following system changes  
+- Dependency on multi-order or panel-based formatting within interface logic  
 
 ---
 
 ## Action Taken
 - Documented reproducible failure pattern  
-- Captured LIS protocol examples showing inconsistent field population (e.g., pipe-delimited empty fields `|||||`)  
-- Escalated findings to LIS team  
-- LIS escalated to vendor (Sunquest) for further investigation  
+- Captured LIS protocol output demonstrating inconsistent field population (e.g., pipe-delimited empty fields `|||||`)  
+- Escalated findings to LIS and vendor teams for further investigation  
 
 ---
 
 ## Outcome
-- Eliminated ambiguity in troubleshooting by isolating a specific failure condition  
-- Enabled targeted escalation with clear reproducible criteria  
-- Reduced time spent on repeated trial-and-error troubleshooting  
+- Isolated a specific, reproducible failure condition  
+- Enabled targeted escalation with clear technical criteria  
+- Reduced repeated troubleshooting cycles and ambiguity  
 
 ---
 
 ## Analyst Insight
-This issue highlights how **accession structure and order configuration directly impact LIS–instrument interface behavior**.
+This case demonstrates how accession structure and order configuration directly impact LIS–instrument interface behavior.
 
-Key takeaways:
+### Key Takeaways
 - Interface logic may behave differently based on single vs multi-order accessions  
 - Structurally valid messages can still fail if required fields are not populated  
-- Post-update validation of interface configuration is critical  
+- Post-change validation of interface behavior is critical  
 
 From an Epic Beaker perspective, this reinforces the importance of:
 - Order build design (standalone vs panel-based orders)  
