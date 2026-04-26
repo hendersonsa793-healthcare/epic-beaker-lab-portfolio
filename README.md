@@ -1,4 +1,4 @@
-# Epic Beaker–Aligned Laboratory Workflow Portfolio
+# Epic Beaker–Aligned Laboratory Portfolio
 > Modeling clinical laboratory workflows, system integration, and real-world troubleshooting aligned to Epic Beaker environments.
 
 ---
