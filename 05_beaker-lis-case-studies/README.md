@@ -92,7 +92,7 @@ Each case study follows a structured clinical systems analysis approach:
 
 Across these domains, a consistent pattern emerges:
 
-> System configuration decisions—especially in order build, workflow design, and interface logic can propagate across the entire order-to-result lifecycle, impacting clinical workflows, data quality, and reporting accuracy.
+> System configuration decisions, especially in order build, workflow design, and interface logic can propagate across the entire order-to-result lifecycle, impacting clinical workflows, data quality, and reporting accuracy.
 
 ---
 
