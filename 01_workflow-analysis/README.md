@@ -138,6 +138,7 @@ Workflow analysis and TAT exploration
 
 /sql
 Clarity-style SQL queries (01–09) for workflow investigation
+```
 
 ### Status
 
