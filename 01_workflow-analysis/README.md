@@ -2,11 +2,25 @@
 
 ---
 
+## Executive Summary
+
+This project simulates and analyzes microbiology laboratory workflows across the full order-to-result lifecycle, using synthetic data modeled after Epic Beaker–aligned operations.
+
+The analysis evaluates how workflow structure, transport dynamics, and laboratory processing impact turnaround time (TAT). SQL-based investigation was used to segment performance by test type, patient location, and priority, and to identify bottlenecks and delay patterns.
+
+Key findings indicate that Med Surg wound cultures have the highest total TAT, primarily driven by laboratory processing time. While elevated lab time is expected for culture-based workflows, the magnitude of delay suggests potential operational factors such as batching, prioritization, or staffing constraints.
+
+This project demonstrates how clinical workflow data can be structured and analyzed to support operational decision-making in laboratory and healthcare IT environments.
+
+---
+
 ### Overview
 
 This project simulates and analyzes microbiology and molecular laboratory workflows across the full **order-to-result lifecycle**, aligned with real-world **Epic Beaker–style laboratory operations**.
 
 Using synthetic but clinically realistic data, the project models how workflow structure, transport dynamics, and operational constraints impact turnaround time (TAT). The goal is to identify bottlenecks and workflow inefficiencies using a structured, analyst-driven approach.
+
+> Delays in microbiology turnaround time can directly impact antibiotic selection, patient length of stay, and overall clinical decision-making.
 
 ---
 
@@ -66,15 +80,34 @@ Analysis of workflow performance by:
 
 A structured SQL analysis layer was developed to simulate **Epic Clarity–style reporting and workflow investigation**.
 
-The SQL analysis includes:
-- dataset validation and schema review  
-- TAT segmentation by test, location, and priority  
-- expected vs actual TAT modeling  
-- delay severity classification  
-- workflow bottleneck identification  
-- delay flag analysis  
-- STAT vs routine performance evaluation  
-- outlier detection for extreme delays  
+#### SQL Analysis Overview
+
+- **01 – Basic Table Review**  
+  Validates dataset structure and key workflow dimensions  
+
+- **02 – TAT by Test, Location, Priority**  
+  Identifies highest TAT workflow segments  
+
+- **03 – Expected TAT Model**  
+  Establishes expected performance baselines  
+
+- **04 – Expected vs Actual TAT**  
+  Quantifies performance gaps across workflows  
+
+- **05 – Delay Severity Classification**  
+  Categorizes delays into actionable severity levels  
+
+- **06 – Bottleneck Stage Analysis**  
+  Identifies dominant workflow stage contributing to delays  
+
+- **07 – Delay Flags Analysis**  
+  Summarizes delay frequency across workflow stages  
+
+- **08 – STAT Order Performance**  
+  Evaluates effectiveness of priority workflows  
+
+- **09 – Outlier Detection**  
+  Identifies extreme delay cases for targeted investigation  
 
 ---
 
@@ -105,7 +138,6 @@ Workflow analysis and TAT exploration
 
 /sql
 Clarity-style SQL queries (01–09) for workflow investigation
-```
 
 ### Status
 
